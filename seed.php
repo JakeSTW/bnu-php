@@ -14,8 +14,6 @@
         array("David", "Brown", "Internet Systems Development", "1988-11-22", "2 HillGrove road", "Bucks", "UK", "HP14 8MI")
     );
 
-    //Define function to instert student records into the database
-    function insertStudentRecords($conn, $students)
 
     // Loop through each student record and insert into the database
     foreach ($students as $student) {
@@ -32,8 +30,6 @@
         $sql = "INSERT INTO students (firstName, lastName, major, dob, house, town, county, country, postcode) VALUES ('$firstName', '$lastName', '$major', '$dob', '$house', '$town', '$county', '$country', '$postcode')";
         mysqli_query($conn, $sql);
     }
-
-    insertStudentRecords($conn, $students);
 
     // Output success message
     echo "5 student records have been inserted into the database.";
