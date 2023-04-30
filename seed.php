@@ -27,7 +27,7 @@
         $postcode = $student[7];
         $id = uniqid(); // generate a unique id for each student
 
-        $sql = "INSERT INTO `oss-cw2`.`student` (id, firstName, lastName, dob, house, town, county, country, postcode) VALUES ('$id', '$firstName', '$lastName', '$dob', '$house', '$town', '$county', '$country', '$postcode')";
+        $sql = "INSERT INTO `oss-cw2`.`student` (firstName, lastName, dob, house, town, county, country, postcode) VALUES ('$firstName', '$lastName', '$dob', '$house', '$town', '$county', '$country', '$postcode')";
         mysqli_query($conn, $sql);
     }
 
